@@ -1,0 +1,11 @@
+.link{
+    color: chartreuse;
+  }
+  ::-moz-selection{
+    background: yellow;
+    color: black;
+  }
+  ::selection{
+    background: yellow;
+    color: black;
+  }

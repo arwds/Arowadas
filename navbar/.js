@@ -2,7 +2,7 @@ const Navbar = () => {
     let nav = document.querySelector('.navbar');
     nav.innerHTML=`
     <div class="navdiv">
-            <img src="/Arowadas/fulllogo.png" class="logo" alt="Navbar Logo">
+            <a href="/Arowadas/index.html"><img src="/Arowadas/fulllogo.png" class="logo" alt="Navbar Logo"></a>
             <div class="navthings">
                 <div class="search">
                     <input type="text" class="searchbar" placeholder="Search items">

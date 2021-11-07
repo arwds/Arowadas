@@ -1,11 +1,17 @@
 a{
-    color: chartreuse;
-  }
-  ::-moz-selection{
-    background: yellow;
-    color: black;
-  }
-  ::selection{
-    background: yellow;
-    color: black;
-  }
+  color: #353535;
+  text-decoration: none;
+  transition: 0.35s;
+  opacity: 0.7;
+}
+a:hover{
+  opacity: 1;
+}
+::-moz-selection{
+  background: yellow;
+  color: black;
+}
+::selection{
+  background: yellow;
+  color: black;
+}

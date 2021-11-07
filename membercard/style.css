@@ -1,7 +1,8 @@
+@import '/Arowadas/navbar/.css';
 body{
     background: blue;
     color: white;
-  }
+}
 #header{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

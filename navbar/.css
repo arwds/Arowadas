@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+.Navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #f7f7f7;
+    z-index: 9;
+}
+.navdiv{
+    padding: 9px 9vw;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    height: 50px;
+}
+.navthings{
+    display: flex;
+    align-items: center;
+}
+.search{
+    width: 400px;
+    display: flex;
+}
+.searchbar{
+    width: 75%;
+    height: 43px;
+    padding: 9px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border: 1.5px solid gray;
+    text-transform: capitalize;
+    background: none;
+    color: gray;
+    outline: none;
+    font-size: inherit;
+}
+.searchbutton{
+    width: 25%;
+    height: 43px;
+    padding: 9px 18px;
+    border: gray 2px;
+    outline: 1px;
+    cursor: pointer;
+    background: gray;
+    color:white;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    font-size: inherit;
+}
+.searchbar::placeholder{
+    color: darkgray;
+}
+.linklist{
+    width: 100%;
+    display: flex;
+    padding: 9px 9vw;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid lightgray;
+}
+.link{
+    text-transform: capitalize;
+    padding: 0 5px;
+    margin: 0 2.5px;
+}

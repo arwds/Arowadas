@@ -28,6 +28,13 @@
     color: rgb(255, 74, 74);
     top: 9px;
 }
-.itemprice{
-    font-size: 10px;
+.couponprice{
+    font-weight: 900;
+    font-size: 19px;
+}
+.normalprice{
+    margin-left: 19px;
+    opacity: 0.8;
+    text-decoration: line-through;
+    color: red;
 }

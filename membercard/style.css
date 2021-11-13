@@ -1,4 +1,4 @@
-@import '/navbar/.css';
+@import '/navbar/style.css';
 #header{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

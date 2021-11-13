@@ -1,4 +1,4 @@
-@import '/navbar/.css';
+@import '/navbar/style.css';
 .pcontaner{
     padding: 0 9vw;
     display: flex;

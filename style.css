@@ -1,1 +1,30 @@
 @import '/navbar/.css';
+.pcontaner{
+    padding: 0 9vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.pcontaner::-webkit-scrollbar{
+    display: none;
+}
+.product{
+    flex: auto;
+    width: 260;
+    height: 350;
+    margin-right: 36px;
+}
+.productimg{
+    position: relative;
+    width: 100%;
+    height: 305px;
+    overflow: hidden;
+}
+.discount{
+    position: absolute;
+    background: rgb(255, 255, 255);
+    padding: 6px;
+    border-radius: 6px;
+    color: rgb(255, 74, 74);
+    top: 9px;
+}

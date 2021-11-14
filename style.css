@@ -39,6 +39,5 @@
     color: red;
 }
 .info{
-    height: 20px;
-    width: 330px;
+    position: relative;
 }

@@ -2,7 +2,7 @@
 .pcontaner{
     padding: 0 9vw;
     display: flex;
-    overflow-x: auto;
+    overflow: hidden;
     scroll-behavior: smooth;
 }
 .pcontaner::-webkit-scrollbar{
@@ -13,6 +13,7 @@
     width: 260;
     height: 350;
     margin-right: 36px;
+    overflow: hidden;
 }
 .productimg{
     position: relative;

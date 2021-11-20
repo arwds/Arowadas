@@ -10,9 +10,8 @@
 }
 .product{
     flex: auto;
-    width: 260;
-    height: 350;
-    margin-right: 36px;
+    width: 125;
+    height: 200;
     overflow: hidden;
 }
 .productimg{

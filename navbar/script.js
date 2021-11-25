@@ -12,7 +12,6 @@ const Navbar = () => {
     </div>
     <ul class="linklist">
         <li class="link"><a href="/index.html">Home</a></li>
-        <li class="link"><a href="/compo">Compo</a></li>
         <li class="link"><a href="/membercard">Member Card</a></li>
         <li class="link"><a href="/mathcompo">Math Compo</a></li>
         <li class="link"><a href="/mustacheman">Mustache Man</a></li>

@@ -2,22 +2,16 @@
 .pcontaner{
     padding: 0 9vw;
     display: flex;
-    overflow: hidden;
-    scroll-behavior: smooth;
-}
-.pcontaner::-webkit-scrollbar{
-    display: none;
 }
 .product{
-    flex: auto;
+    flex: 0 0 auto;
     width: 125px;
     height: 200px;
-    overflow: hidden;
 }
 .productimg{
     position: relative;
     width: 100%;
-    height: 330px;
+    height: 125px;
     overflow: hidden;
 }
 .discount{

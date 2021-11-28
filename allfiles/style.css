@@ -8,10 +8,10 @@ a:hover{
   opacity: 1;
 }
 ::-moz-selection{
-  background: yellow;
+  background: auto;
   color: black;
 }
 ::selection{
-  background: yellow;
+  background: auto;
   color: black;
 }

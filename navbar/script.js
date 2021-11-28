@@ -17,6 +17,7 @@ const Navbar = () => {
         <li class="link"><a href="/mustacheman">Mustache Man</a></li>
         <li class="link"><a href="/sparkl">Sparkl</a></li>
     </ul>
+    <script src="/navbar/searchbar.js"></script>
     `;
 }
 

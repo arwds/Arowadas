@@ -16,6 +16,8 @@ const Navbar = () => {
         <li class="link"><a href="/mathcompo">Math Compo</a></li>
         <li class="link"><a href="/mustacheman">Mustache Man</a></li>
         <li class="link"><a href="/sparkl">Sparkl</a></li>
+        <li class="link"><a href="/song">Song Group</a></li>
+        <li class="link"><a href="/news">ANEWS</a></li>
     </ul>
     <script src="/navbar/searchbar.js"></script>
     `;

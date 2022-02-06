@@ -17,6 +17,14 @@ const Navbar = () => {
         <li class="link"><a href="/mustacheman">Mustache Man</a></li>
         <li class="link"><a href="/song">Song Group</a></li>
         <li class="link"><a href="/news">ANEWS</a></li>
+        <li class="link"><a href="#">Games</a>
+            <ul>
+                <li class="link"><a href="#">Cheaseball Wakeup</a>
+                <li class="link"><a href="#">The Great Escape</a>
+                <li class="link"><a href="#">Cheaseball Wakeup 2</a>
+                <li class="link"><a href="#">Dimond Blob, Void</a>
+            </ul>
+        </li>
     </ul>
     <script src="/navbar/searchbar.js"></script>
     `;

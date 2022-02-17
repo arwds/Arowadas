@@ -9,7 +9,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: #f7f7f7;
+    background: #f3f3f3;
     z-index: 9;
 }
 .navdiv{
@@ -72,5 +72,5 @@
     list-style: none;
 }
 .link:hover{
-    background-color: #929292;
+    background-color: #f6f6f6;
 }

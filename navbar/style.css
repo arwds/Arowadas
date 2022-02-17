@@ -71,9 +71,6 @@
     margin: 0 2.5px;
     list-style: none;
 }
-.link:hover{
-    background-color: #f6f6f6;
-}
 .link ul{
     display: none;
 }

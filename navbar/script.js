@@ -19,10 +19,10 @@ const Navbar = () => {
         <li class="link"><a href="/news">ANEWS</a></li>
         <li class="link"><a href="#">Games</a>
             <ul>
-                <li class="link"><a href="#">Cheaseball Wakeup</a>
-                <li class="link"><a href="#">The Great Escape</a>
-                <li class="link"><a href="#">Cheaseball Wakeup 2</a>
-                <li class="link"><a href="#">Dimond Blob, Void</a>
+                <li class="link"><a href="#">Cheaseball Wakeup</a></li>
+                <li class="link"><a href="#">The Great Escape</a></li>
+                <li class="link"><a href="#">Cheaseball Wakeup 2</a></li>
+                <li class="link"><a href="#">Dimond Blob, Void</a></li>
             </ul>
         </li>
     </ul>

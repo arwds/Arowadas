@@ -18,12 +18,14 @@ const Navbar = () => {
         <li class="link"><a href="/song">Song Group</a></li>
         <li class="link"><a href="/news">ANEWS</a></li>
         <li class="link"><a href="#">Games</a>
-            <ul>
-                <li class="link"><a href="/games/cheaseballwakeup">Cheaseball Wakeup</a></li>
-                <li class="link"><a href="/games/thegreatescape">The Great Escape</a></li>
-                <li class="link"><a href="#">Cheaseball Wakeup 2</a></li>
-                <li class="link"><a href="/games/dimondblobvoid">Dimond Blob, Void</a></li>
-            </ul>
+            <div class="dropdown">
+                <ul>
+                    <li class="link"><a href="/games/cheaseballwakeup">Cheaseball Wakeup</a></li>
+                    <li class="link"><a href="/games/thegreatescape">The Great Escape</a></li>
+                    <li class="link"><a href="#">Cheaseball Wakeup 2</a></li>
+                    <li class="link"><a href="/games/dimondblobvoid">Dimond Blob, Void</a></li>
+                </ul>
+            </div>
         </li>
     </ul>
     <script src="/navbar/searchbar.js"></script>

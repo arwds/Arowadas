@@ -6,6 +6,7 @@
 }
 #main{
     background-color: #333333;
+    display: flex;
 }
 .footerlink{
     text-decoration: none;
@@ -20,4 +21,8 @@
 }
 .media{
 float: right;
+}
+
+.column{
+    width: 50ch;
 }

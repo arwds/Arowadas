@@ -7,7 +7,7 @@ const Footer = () => {
     <div id="main">
         <a class="footerlink" href="mailto:contactus.arowadas@gmail.com">Contact Us</a><br>
         <a class="footerlink" href="/policies/privacypolicy.html">Privacy Policy</a><br>
-        <a class="footerlink" href="/policies/termsofservice.html">Terms of Service</a>
+        <a class="footerlink" href="/policies/termsofservice.html">Terms of Service</a><br>
         <a class="footerlink" href="/policies/about.html">About</a>
     </div>
     `;

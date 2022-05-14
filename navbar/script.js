@@ -9,7 +9,6 @@ const Navbar = () => {
         <li class="link"><a href="/membercard">Member Card</a></li>
         <li class="link"><a href="/mathcompo">Math Compo</a></li>
         <li class="link"><a href="/news">ANEWS</a></li>
-        <li class="link"><a href="mailto:arowadas@gmail.com">Contact Us</a></li>
     </ul>
     <script src="/navbar/searchbar.js"></script>
     `;

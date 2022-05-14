@@ -14,18 +14,8 @@ const Navbar = () => {
         <li class="link"><a href="/index.html">Home</a></li>
         <li class="link"><a href="/membercard">Member Card</a></li>
         <li class="link"><a href="/mathcompo">Math Compo</a></li>
-        <li class="link"><a href="/song">Song Group</a></li>
         <li class="link"><a href="/news">ANEWS</a></li>
-        <li class="link"><a href="#">Games</a>
-            <div class="dropdown">
-                <ul>
-                    <li class="link"><a href="/games/cheaseballwakeup">Cheaseball Wakeup</a></li>
-                    <li class="link"><a href="/games/thegreatescape">The Great Escape</a></li>
-                    <li class="link"><a href="#">Cheaseball Wakeup 2</a></li>
-                    <li class="link"><a href="/games/dimondblobvoid">Dimond Blob, Void</a></li>
-                </ul>
-            </div>
-        </li>
+        <li class="link"><a href="mailto:arowadas@gmail.com">Contact Us</a></li>
     </ul>
     <script src="/navbar/searchbar.js"></script>
     `;

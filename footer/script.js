@@ -1,7 +1,14 @@
 const Footer = () => {
     let nav = document.querySelector('.footer');
     nav.innerHTML=`
-    
+    <div id="medialinks">
+        <a class="media" name="youtube" href="https://www.youtube.com/channel/UCtpcOrb_AMWjKMlR7M1amdQ"><img src="youtube.png" alt="youtube"></a>
+    </div>
+    <div id="main">
+        <a class="footerlink" href="mailto:contactus.arowadas@gmail.com">Contact Us</a><br>
+        <a class="footerlink" href="#">Privacy Policy</a><br>
+        <a class="footerlink" href="#">Terms of Service</a>
+    </div>
     `;
 }
 

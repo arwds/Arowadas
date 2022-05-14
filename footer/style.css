@@ -7,3 +7,17 @@
 #main{
     background-color: #333333;
 }
+.footerlink{
+    text-decoration: none;
+    color: #dbdbdb;
+}
+.media img{
+    height: 3ch;
+}
+#medialinks{
+    background-color: #424242;
+    height: 4ch;
+}
+.media{
+float: right;
+}

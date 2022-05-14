@@ -1,4 +1,5 @@
 @import '/navbar/style.css';
+@import '/footer/style.css';
 #header{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

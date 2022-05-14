@@ -10,7 +10,7 @@
 }
 .footerlink{
     text-decoration: none;
-    color: #dbdbdb;
+    color: #bdbdbd;
 }
 .media img{
     height: 3ch;
@@ -25,4 +25,7 @@ float: right;
 
 .column{
     width: 20ch;
+}
+.columnheader{
+    color: #ffffff;
 }

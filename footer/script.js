@@ -6,7 +6,7 @@ const Footer = () => {
     </div>
     <div id="main">
         <div class="column column1">
-            <h3><u>Policies</u></h3>
+            <h2 class="columnheader"><u>Policies</u></h2>
             <a class="footerlink" href="mailto:contactus.arowadas@gmail.com">Contact Us</a><br>
             <a class="footerlink" href="/policies/privacypolicy.html">Privacy Policy</a><br>
             <a class="footerlink" href="/policies/termsofservice.html">Terms of Service</a><br>
@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
 
         <div class="column column2">
-            <h3><u>Web Links</u></h3>
+            <h2 class="columnheader"><u>Web Links</u></h2>
             <a class="footerlink" href="/index.html">Home</a><br>
             <a class="footerlink" href="/membercard">Member Card</a><br>
             <a class="footerlink" href="/mathcompo">Math Compo</a><br>

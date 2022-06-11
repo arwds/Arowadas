@@ -1,2 +1,11 @@
 @import '/navbar/style.css';
 @import '/footer/style.css';
+
+.cards{
+    margin: 0 auto;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

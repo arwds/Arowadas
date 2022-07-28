@@ -3,10 +3,10 @@
 
 .itemgrid{
     display: grid;
-    grid-template-columns: repeat(4,300px);
-    overflow-wrap: normal;
+    grid-template-columns: auto;
 
 }
 .product{
     padding: 50px;
+    width: 300px;
 }

@@ -2,6 +2,7 @@
 @import '/footer/style.css';
 
 .vidwrap{
+    position: relative;
     overflow: hidden;
     padding-bottom: 56.25%;
 }
@@ -9,6 +10,8 @@
     position: absolute;
     top: 0;
     left: 0;
+    padding-left: 5%;
+    padding-right: 5%;
     width: 90%;
     height: 90%;
 }

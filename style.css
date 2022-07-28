@@ -4,6 +4,7 @@
 .itemgrid{
     display: grid;
     grid-template-columns: repeat(4,300px);
+    overflow: wrap;
 
 }
 .product{

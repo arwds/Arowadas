@@ -3,9 +3,10 @@
 
 .itemgrid{
     display: grid;
-
+    grid-row-gap: 50px;
+    grid-column-gap: 50px;
+    grid-column: 4;
 }
 .product{
-    padding: 50px;
     width: 300px;
 }

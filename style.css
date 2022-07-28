@@ -3,7 +3,6 @@
 
 .itemgrid{
     display: grid;
-    grid-template-columns: auto;
 
 }
 .product{

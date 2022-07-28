@@ -1,2 +1,11 @@
 @import '/navbar/style.css';
 @import '/footer/style.css';
+
+.itemgrid{
+    display: grid;
+    grid-template-columns: repeat(auto,300px);
+
+}
+.product{
+
+}

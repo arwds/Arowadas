@@ -3,8 +3,10 @@
 
 .itemgrid{
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 50px;
     grid-column: 300px;
 }
 .product{
+
 }

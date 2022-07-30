@@ -73,7 +73,11 @@
     border-bottom: 2px solid rgb(109, 109, 109);
 }
 
-label{
+.checkoutInput::placeholder{
     font-size: 20px;
     font-weight: 310;
+}
+
+.creditcards{
+
 }

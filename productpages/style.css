@@ -35,4 +35,6 @@
 .checkoutButton{
     float: right;
     padding: 5px, 15px;
+    background-color: orangered;
+    color: white;
 }

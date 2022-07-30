@@ -38,7 +38,9 @@
     background-color: orangered;
     color: white;
     font-weight: 500;
-    border: none;    
+    border: none;
+    height: 120%;
+    width: 120%;
 }
 
 .checkoutButton :hover{

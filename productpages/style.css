@@ -33,5 +33,6 @@
 }
 
 .checkoutButton{
-
+    float: right;
+    padding: 5px, 15px;
 }

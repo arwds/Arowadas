@@ -7,14 +7,14 @@
     grid-gap: 50px;
 }
 .product{
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     background-color: #dbdbdb;
 }
 .productimg{
     padding-top: 20px;
-    height: 200px;
-    width: 300px;
+    height: 25px;
+    width: 250px;
 }
 .pricetag{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

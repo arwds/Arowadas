@@ -79,3 +79,21 @@
     font-size: 20px;
     font-weight: 310;
 }
+
+.cardinfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small{
+    width: 32%;
+}
+
+.paynow{
+    position: absolute;
+    height: 42px;
+    bottom: -42px;
+    width: 100%;
+    left: 0;
+    right: 0;
+}

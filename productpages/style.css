@@ -69,6 +69,8 @@
 .checkoutInput{
     padding: 20px;
     margin: 5px 0px;
+    border: none;
+    border-bottom: 2px solid rgb(109, 109, 109);
 }
 
 label{

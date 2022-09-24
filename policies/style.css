@@ -1,6 +1,2 @@
 @import '/navbar/style.css';
 @import '/footer/style.css';
-.maintext{
-    font-family: 'Courier New', Courier, monospace;
-    color: #111111;
-}

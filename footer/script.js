@@ -4,7 +4,7 @@ const Footer = () => {
     <div id="medialinks">
         <a class="media" href="https://www.youtube.com/channel/UCtpcOrb_AMWjKMlR7M1amdQ"><img src="/img/youtube.png" alt="youtube"></a>
     </div>
-    <div id="main">
+    <div id="all">
         <div class="column column1">
             <h2 class="columnheader"><u>Policies</u></h2>
             <a class="footerlink" href="mailto:contactus.arowadas@gmail.com">Contact Us</a><br>

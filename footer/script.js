@@ -12,7 +12,7 @@ const Footer = () => {
             <a class="footerlink" href="/policies/termsofservice.html">Terms of Service</a><br>
             <a class="footerlink" href="/policies/cookie.html">Cookie Policy</a>
             <a class="footerlink" href="/policies/disclaimer.html">Disclaimer</a>
-            <a class="footerlink" href="/policies/shippingpolicy.html">Disclaimer</a>
+            <a class="footerlink" href="/policies/shippingpolicy.html">Shipping Policy</a>
         </div>
 
         <div class="column column2">

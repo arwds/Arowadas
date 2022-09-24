@@ -10,8 +10,8 @@ const Footer = () => {
             <a class="footerlink" href="mailto:contactus.arowadas@gmail.com">Contact Us</a><br>
             <a class="footerlink" href="/policies/privacypolicy.html">Privacy Policy</a><br>
             <a class="footerlink" href="/policies/termsofservice.html">Terms of Service</a><br>
-            <a class="footerlink" href="/policies/cookie.html">Cookie Policy</a><br>
             <a class="footerlink" href="/policies/disclaimer.html">Disclaimer</a><br>
+            <a class="footerlink" href="/policies/cookie.html">Cookie Policy</a><br>
             <a class="footerlink" href="/policies/shippingpolicy.html">Shipping Policy</a>
         </div>
 

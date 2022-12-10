@@ -17,9 +17,7 @@ const Footer = () => {
 
         <div class="column column2">
             <h2 class="columnheader"><u>Web Links</u></h2>
-            <a class="footerlink" href="/index.html">Home</a><br>
-            <a class="footerlink" href="/membercard">Member Card</a><br>
-            <a class="footerlink" href="/mathcompo">Math Compo</a><br>
+            <a class="footerlink" href="/index.html">Home</a><br>\
             <a class="footerlink" href="/news">ANEWS</a>
         </div>
     </div>

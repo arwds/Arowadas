@@ -15,7 +15,7 @@ fetch("/productpages/products.json")
             name.textContent=product.name
             price.textContent=product.price
             //link=product.link
-            image.image=product.image
+            image.textContent=product.image
 
             console.log(card)
             productContainer.append(card)

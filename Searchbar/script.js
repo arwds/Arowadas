@@ -17,6 +17,6 @@ fetch("/productpages/products.json")
             link=product.link
             image=product.image
 
-            productContainer.append(card)
+            console.log(card)
         })
     })

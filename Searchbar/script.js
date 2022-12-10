@@ -18,5 +18,6 @@ fetch("/productpages/products.json")
             //image=product.image
 
             console.log(card)
+            productContainer.append(card)
         })
     })

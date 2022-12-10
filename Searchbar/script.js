@@ -5,6 +5,6 @@ fetch("/productpages/products.json")
     .then(data => {
         data.forEach(user=>{
             const card = productTemplate.content.cloneNode(true).children[0]
-            console.log(card)
+            console.log(user)
         })
     })

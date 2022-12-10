@@ -16,9 +16,9 @@ fetch("/productpages/products.json")
             price.textContent=product.price
             image.src=product.image
 
-            link.addEventListener("click", () =>{
+            link.onclick=function(){
                 window.open(product.link, "_top")
-            })
+            }
 
             console.log(card)
             productContainer.append(card)

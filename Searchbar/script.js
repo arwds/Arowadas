@@ -16,8 +16,8 @@ fetch("/productpages/products.json")
             price.textContent=product.price;
             image.src=product.image;
             
-            linkdocument.onclick = function(){
-                window.open(product.link);
+            if(linkdocument){
+                linkdocument.href=product.link
             }
             
             console.log(card);

@@ -9,15 +9,16 @@ fetch("/productpages/products.json")
             
             const name=card.querySelector("[data-name]");
             const price=card.querySelector("[data-price]");
-            const link=document.querySelector(".productlink");
+            const linkdocument=document.querySelector(".productlink");
+            const linkcard=card.querySelector("[data-productlink]");
             const image=card.querySelector("[data-image]");
 
             name.textContent=product.name;
             price.textContent=product.price;
             image.src=product.image;
             
-            if(link){
-                link.href=product.link;
+            if(linkdocument){
+                linkcard.href=product.link;
             }
             console.log(card);
             productContainer.append(card);

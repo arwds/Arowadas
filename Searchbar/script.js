@@ -7,10 +7,10 @@ fetch("/productpages/products.json")
         data.forEach(product=>{
             const card = productTemplate.content.cloneNode(true).children[0];
             
-            const name=document.querySelector("[data-name]");
-            const price=document.querySelector("[data-price]");
+            const name=card.querySelector("[data-name]");
+            const price=card.querySelector("[data-price]");
             const link=document.querySelector("[data-productlink]");
-            const image=document.querySelector("[data-image]");
+            const image=card.querySelector("[data-image]");
 
             name.textContent=product.name;
             price.textContent=product.price;

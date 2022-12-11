@@ -16,9 +16,10 @@ fetch("/productpages/products.json")
             price.textContent=product.price;
             image.src=product.image;
             
-            if(linkdocument){
-                linkdocument.href=product.link;
+            linkdocument.onclick = function(){
+                window.open(product.link);
             }
+            
             console.log(card);
             productContainer.append(card);
         });

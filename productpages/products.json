@@ -7,28 +7,28 @@
       "image": "/img/youtube.png"
     },
     {
-        "id": 1,
+        "id": 2,
         "name": "Piggy",
         "price": "$89.99",
         "link": "/productpages/template.html",
         "image": "/img/youtube.png"
       },
       {
-        "id": 1,
+        "id": 3,
         "name": "Puppy",
         "price": "$79.99",
         "link": "/productpages/template.html",
         "image": "/img/youtube.png"
       },
       {
-        "id": 1,
+        "id": 4,
         "name": "Froggy",
         "price": "$69.99",
         "link": "/productpages/template.html",
         "image": "/img/youtube.png"
       },
       {
-        "id": 1,
+        "id": 5,
         "name": "Cowwy",
         "price": "$59.99",
         "link": "/productpages/template.html",

@@ -16,7 +16,7 @@ fetch("/productpages/products.json")
             price.textContent=product.price;
             image.src=product.image;
             
-            if(true){
+            if(productlink){
                 productlink.setAttribute('href', product.link)
             }
             console.log(card);

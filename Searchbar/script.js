@@ -9,7 +9,7 @@ fetch("/productpages/products.json")
             
             const name=card.querySelector("[data-name]");
             const price=card.querySelector("[data-price]");
-            const linkdocument=document.querySelector(".productlink");
+            const linkdocument=card.querySelector("[productlink]");
             const image=card.querySelector("[data-image]");
 
             if(linkdocument){

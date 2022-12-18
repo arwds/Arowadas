@@ -14,8 +14,9 @@ fetch("/productpages/products.json")
 
             name.textContent=product.name;
             price.textContent=product.price;
-            image.src=product.image;
-            
+            if(image){
+                image.src=product.image;
+            }
             if(linkdocument){
                 linkdocument.href=product.link
             }

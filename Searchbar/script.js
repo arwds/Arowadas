@@ -12,13 +12,13 @@ fetch("/productpages/products.json")
             const linkdocument=document.querySelector(".productlink");
             const image=card.querySelector("[data-image]");
 
+            if(linkdocument){
+                linkdocument.href=product.link
+            }
+            image.src=product.image;
             name.textContent=product.name;
             price.textContent=product.price;
-            image.src=product.image;
             
-            if(linkdocument){
-                linkdocument.src=product.link
-            }
             
             console.log(card);
             productContainer.append(card);

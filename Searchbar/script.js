@@ -17,7 +17,7 @@ fetch("/productpages/products.json")
             image.src=product.image;
             
             if(linkdocument){
-                linkdocument.href=product.link
+                linkdocument.src=product.link
             }
             
             console.log(card);

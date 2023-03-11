@@ -1,26 +1,17 @@
-const productTemplate = document.querySelector("[data-product-template]");
-const productContainer = document.querySelector("[data-product-container]");
+import productinfo from "/productpages/products.json" assert {type: "json"};
 
-fetch("/productpages/products.json")
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(product=>{
-            const card = productTemplate.content.cloneNode(true).children[0];
-            
-            const name=card.querySelector("[data-name]");
-            const price=card.querySelector("[data-price]");
-            const link=document.querySelector("[data-link]");
-            const image=card.querySelector("[data-image]");
-
-            if(link){
-                link.href=product.link;
-            }
-            image.src=product.image;
-            name.textContent=product.name;
-            price.textContent=product.price;
-            
-            
-            console.log(card);
-            productContainer.append(card);
-        });
-    });
+document.getElementById("container").innerHTML = `
+    ${productinfo.map(function(item){
+        return`
+        <a href="${item.link}" class="productlink" data-link>
+            <div class="itemgrid">
+                <div class="product" style="cursor: pointer;">
+                    <center><img src = "${item.image}" class="productimg" /></center>
+                    <center><p class="productname">${item.name}</p></center>
+                    <center><p class="pricetag">${item.price}</p></center>
+                </div>
+            </div>
+        </a>
+        `
+    }).join("")}
+`;

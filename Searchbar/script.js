@@ -8,7 +8,7 @@ Search.addEventListener("input", inp => {
     const value = inp.target.value;
     products.forEach(product => {
         const Visibility = product.name.includes(value)
-        product.element.classList.toggle("visible", Visibility)
+        product.element.classList.toggle("show", Visibility)
     }); 
 });
 

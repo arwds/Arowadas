@@ -33,10 +33,9 @@
     width: 75%;
     height: 43px;
     padding: 9px;
-    border-top-left-radius: 9px;
-    border-bottom-left-radius: 9px;
+    border-radius: 9px;
     border: 1.5px solid gray;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     background: none;
     color: gray;
     outline: none;

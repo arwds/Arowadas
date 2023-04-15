@@ -1,34 +1,32 @@
-import productinfo from "/productpages/products.json" assert {type: "json"};
-const SearchBar = document.querySelector("[data-search]")
+const productTemplate = document.querySelector("[data-product-template]");
+const productContainer = document.querySelector("[data-product-container]");
+const Search = document.querySelector("[data-search]");
 
-let prodcutnames = []
+let products = [];
 
-
-//fetch("/productpages/products.json")
-//.then(resp => resp.json())
-//.then(data => console.log(data))
-
-for (var i in productinfo.jsonData){
-    console.log(Object.values(i));
-}
-
-SearchBar.addEventListener("input", inp =>{
+Search.addEventListener("input", inp => {
     const value = inp.target.value;
-
+    products.forEach(product => {
+        const Visibility = product.name.includes(value)
+        product.element.classList.toggle("visible", Visibility)
+    }); 
 });
 
-document.getElementById("container").innerHTML = `
-    ${productinfo.map(function(item){
-        return`
-            <div class="itemgrid">
-                <a href="${item.link}" class="productlink" data-link>
-                    <div class="product" style="cursor: pointer;">
-                        <center><img src = "${item.image}" class="productimg" /></center>
-                        <center><p class="productname">${item.name}</p></center>
-                        <center><p class="pricetag">${item.price}</p></center>
-                    </div>
-                </a>
-            </div>
-        `
-    }).join("")}
-`;
+fetch("/productpages/products.json")
+    .then(res => res.json())
+    .then(data => {
+        products = data.map(product=>{
+            const card = productTemplate.content.cloneNode(true).children[0];
+            
+            const name=card.querySelector("[data-name]");
+            const price=card.querySelector("[data-price]");
+            const linkdocument=document.querySelector(".productlink");
+            const image=card.querySelector("[data-image]");
+            name.textContent=product.name;
+            price.textContent=product.price;
+            image.src=product.image;
+
+            productContainer.append(card);
+            return {name: product.name, element: card};
+        });
+    });

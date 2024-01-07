@@ -2,7 +2,7 @@
 document.write(`
   <header>
     <nav>
-      <center><h1>Arowadas Terminal</h1><center>
+      <center><h1>Arowadas Terminal | Kabir Sekhon</h1><center>
     </nav>
   </header>
 `);

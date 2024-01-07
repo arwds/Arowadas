@@ -3,6 +3,16 @@
 <head>
 <title>Arowadas Terminal</title>
 <meta charset="utf-8"/>
+<script>
+  var password = "dolphins33";
+  (function promptPass() {
+    var psw = prompt("Enter the Password");
+    while (psw.toLowerCase() !== password) {
+      alert("Incorrect Password");
+      return promptPass();
+    }
+  }());
+</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4874616183592939"
      crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->

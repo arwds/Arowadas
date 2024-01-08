@@ -3,16 +3,17 @@
 <head>
 <title>Arowadas Terminal</title>
 <meta charset="utf-8"/>
-<script>
-  var password = "dolphins33";
+<!--<script>
+  var password = "swizzle82";
+  var adm = "techsect";
   (function promptPass() {
     var psw = prompt("Enter the Password");
-    while (psw.toLowerCase() !== password) {
+    while (psw.toLowerCase() !== password && adm.toLowerCase() !== adm) {
       alert("Incorrect Password");
       return promptPass();
     }
   }());
-</script>
+</script>-->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4874616183592939"
      crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
@@ -39,7 +40,7 @@
       border-radius: 5px;
       border: none;
     }
-
+    
     #search-button {
       background-color: #4CAF50;
       border: none;
@@ -49,7 +50,36 @@
       border-radius: 5px;
       padding: 10px 15px;
       margin-left: 10px;
+    }
 
+    #passwordenter{
+      padding: 10px;
+      font-size: 19px;
+      border-radius: 5px;
+      border-color: white;
+      border-width: 1px;
+      background-color: transparent;
+      color: white;
+    }
+
+    #passwordbutton{
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-left: 10px;
+    }
+
+    
+    #mainsect{
+      display: none;
+    }
+    #footersect{
+      display: none;
+    }
         /* Default favicon for all screen sizes
           link[rel="icon"] {
           display: none; /* Hide the default favicon
@@ -149,6 +179,16 @@
   </a>
 </div>-->
 
+<!--Password Box-->
+<div id="loginpage">
+<center>
+<h1 id="loginterminal">Arowadas Secure Login Terminal</h1>
+<input id="passwordenter" placeholder="PASSWORD" type="password" onkeydown="if (event.keyCode == 13) { checkpswd(); }" />
+<button id="passwordbutton" onclick="checkpswd()">Enter</button>
+</center>
+</div>
+
+<div id="mainsect">
 <br>
 <form id="search-container">
   <div id="logo-title">
@@ -792,6 +832,14 @@
 
 </div>
 
+<footer id="footersect">
+  <p>Founded By Kabir Sekhon</p>
+  <p>Managed By Arowadas Co.<img src="/favicon.png" alt="Arowadas Co." class="custom-emoji"> </p>
+</footer>
+</div>
+
+<!--JAVASCRIPT CODING END-->
+
 <!--START SEARCH ELEMENT-->
 <div id="particles-js"></div>
 </main>
@@ -875,9 +923,38 @@ var msnry = new Masonry( elem, {
   
   window.addEventListener('load', setRandomVideoSource);
 </script>-->
-<footer>
-  <p>Founded By Kabir Sekhon</p>
-  <p>Managed By Arowadas Co.<img src="/favicon.png" alt="Arowadas Co." class="custom-emoji"> </p>
-</footer>
+
+<script>
+  function showmain(){
+    var mainsect = document.getElementById("mainsect");
+    var footersect = document.getElementById("footersect");
+
+    mainsect.style.display = "block";
+    footersect.style.display = "block";
+  };
+
+  function hidelogin(){
+    var loginterminal = document.getElementById("loginterminal");
+    var passwordbutton = document.getElementById("passwordbutton");
+    var passwordenter = document.getElementById("passwordenter");
+
+    loginterminal.style.display = "none";
+    passwordbutton.style.display = "none";
+    passwordenter.style.display = "none";
+  };
+
+  function checkpswd(){
+    var pwdenter = document.getElementById("passwordenter").value;
+    
+    var psd = "axel33";
+    var adm = "terminal69";
+
+    if(pwdenter.toLowerCase() == psd || pwdenter.toLowerCase() == adm){
+      hidelogin();
+      showmain();
+    };
+  };
+</script>
+
 </body>
 </html>

@@ -982,13 +982,12 @@ var msnry = new Masonry( elem, {
     var pwdenter = document.getElementById("passwordenter").value;
     
     var psd = "qwerty7";
-    var adm = "terminal69";
 
     if(pwdenter.toLowerCase() == psd){
       hidelogin();
       showmain();
     };
-    if(pwdenter.toLowerCase() == adm){
+    if(pwdenter.toLowerCase() == ""){
       hidelogin();
       showmain();
       showadminportal();

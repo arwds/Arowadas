@@ -3,6 +3,7 @@
 <head>
 <title>Arowadas Terminal</title>
 <meta charset="utf-8"/>
+<link rel="stylesheet" href="/allfiles/style.css">
 <!--<script>
   var password = "swizzle82";
   var adm = "techsect";
@@ -79,6 +80,27 @@
     }
     #footersect{
       display: none;
+    }
+    #adminportal{
+      background-color: rgb(30, 30, 30);
+      border-radius: 10px;
+      width: 70%;
+
+      display: none;
+    }
+    .adminbutton{
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-left: 10px;
+      margin-bottom: 15px;
+    }
+    #shutdown{
+      background-color: red;
     }
         /* Default favicon for all screen sizes
           link[rel="icon"] {
@@ -186,6 +208,13 @@
 <input id="passwordenter" placeholder="PASSWORD" type="password" onkeydown="if (event.keyCode == 13) { checkpswd(); }" />
 <button id="passwordbutton" onclick="checkpswd()">Enter</button>
 </center>
+</div>
+
+<div id="adminportal">
+<h1> ADMIN PORTAL</h1>
+<a href="https://github.com/arwds/Arowadas/edit/master/terminal/index.html" target="_blank"><button class="adminbutton">Change Password</button></a>
+<a href="https://github.com/arwds/Arowadas" target="_blank"><button class="adminbutton">Github</button></a><br><br>
+<a href="https://github.com/arwds/Arowadas/edit/master/allfiles/script.js" target="_blank"><button class="adminbutton" id="shutdown">SHUTDOWN</button></a>
 </div>
 
 <div id="mainsect">
@@ -943,18 +972,29 @@ var msnry = new Masonry( elem, {
     passwordenter.style.display = "none";
   };
 
+  function showadminportal(){
+    var adminportal = document.getElementById("adminportal");
+
+    adminportal.style.display = "block";
+  }
+
   function checkpswd(){
     var pwdenter = document.getElementById("passwordenter").value;
     
-    var psd = "axel33";
+    var psd = "qwerty7";
     var adm = "terminal69";
 
-    if(pwdenter.toLowerCase() == psd || pwdenter.toLowerCase() == adm){
+    if(pwdenter.toLowerCase() == psd){
       hidelogin();
       showmain();
     };
+    if(pwdenter.toLowerCase() == adm){
+      hidelogin();
+      showmain();
+      showadminportal();
+    }
   };
 </script>
-
+<script src="/allfiles/script.js"></script>
 </body>
 </html>

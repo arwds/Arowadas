@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <title>Slope 2 | CybriaGames</title>
+    <title>Slope 2 | Arowadas</title>
     <link rel="icon" type="image/png" href="/img/favicon/slope.png" />
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
@@ -18,6 +18,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body style="width: 100%; height: 100%; margin: 0;">
+    <script>
+    	    // Auth system for Games
+    	    document.addEventListener("DOMContentLoaded", function() {
+    	    const redirected = localStorage.getItem('redirected');
+    	
+    	    if (redirected === 'true') {
+    		    localStorage.removeItem('redirected');
+    	    } 
+    	    else {
+    		    window.location.href = "/terminal/index.html";
+    	    }
+    	    });
+	  </script>
     <div id="unity-container" style="width: 100%; height: 100%; margin: 0;" class="unity-desktop">
       <canvas id="unity-canvas" style="width: 100%; height: 100%; margin: 0;"></canvas>
       <div id="unity-loading-bar">

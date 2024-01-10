@@ -10,7 +10,7 @@
 
   gtag('config', 'G-NTQ60TS6SP');
 </script>
-    <title>Tunnel Rush | CybriaGames</title>
+    <title>Tunnel Rush | Arowadas</title>
     <link rel="stylesheet" href="style/style.css">
     <script src="UnityLoader.js"></script>
     <script src="UnityProgress.js"></script>
@@ -20,6 +20,19 @@
     </script>
   </head>
   <body>
+    <script>
+    	    // Auth system for Games
+    	    document.addEventListener("DOMContentLoaded", function() {
+    	    const redirected = localStorage.getItem('redirected');
+    	
+    	    if (redirected === 'true') {
+    		    localStorage.removeItem('redirected');
+    	    } 
+    	    else {
+    		    window.location.href = "/terminal/index.html";
+    	    }
+    	    });
+	  </script>
     <!-- BY ECHO!!! DO NOT REMOVE THIS COMMENT THE GAME WILL BREAK!!!
 
 https://ubg247.github.io/

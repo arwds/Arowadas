@@ -12,7 +12,7 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#2d3331" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <title>Paper.io 2 | CybriaGames</title>
+    <title>Paper.io 2 | Arowadas</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" type="image/png" href="/img/favicon/paperio2.png" />
     <link rel="shortcut icon" type="image/png" href="/img/favicon/paperio2.png" />
@@ -20,6 +20,19 @@
     <link rel="stylesheet" href="css/style3.css" />
   </head>
   <body>
+    <script>
+	    // Auth system for Games
+	    document.addEventListener("DOMContentLoaded", function() {
+	    const redirected = localStorage.getItem('redirected');
+	
+	    if (redirected === 'true') {
+		    localStorage.removeItem('redirected');
+	    } 
+	    else {
+		    window.location.href = "/terminal/index.html";
+	    }
+	    });
+	  </script>
     <script type="text/javascript" src="/js/main.js"></script>
     <script type="text/javascript" src="js/window.js"></script>
     <script type="text/javascript" src="js/loader.js"></script>

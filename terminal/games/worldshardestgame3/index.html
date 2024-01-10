@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Worlds Hardest Game 3 | CybriaGames</title>
+  <title>Worlds Hardest Game 3 | Arowadas</title>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
 <script>
@@ -32,6 +32,19 @@
 </head>
 
 <body>
+  <script>
+    	    // Auth system for Games
+    	    document.addEventListener("DOMContentLoaded", function() {
+    	    const redirected = localStorage.getItem('redirected');
+    	
+    	    if (redirected === 'true') {
+    		    localStorage.removeItem('redirected');
+    	    } 
+    	    else {
+    		    window.location.href = "/terminal/index.html";
+    	    }
+    	    });
+	  </script>
   <div class="swf-container">
     <embed height="100%" pluginspage="http://www.macromedia.com/go/getflashplayer" src="./whg3.swf"
       type="application/x-shockwave-flash" width="100%"></embed>

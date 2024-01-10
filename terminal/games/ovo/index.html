@@ -75,7 +75,19 @@
 </head> 
  
 <body> 
+	<script>
+	    // Auth system for Games
+	    document.addEventListener("DOMContentLoaded", function() {
+	    const redirected = localStorage.getItem('redirected');
 	
+	    if (redirected === 'true') {
+		localStorage.removeItem('redirected');
+	    } 
+	    else {
+		window.location.href = "/terminal/index.html";
+	    }
+	    });
+	</script>
 	<div id="fb-root"></div>
 	
 	<script>

@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Minecraft Classic | CybriaGames</title>
+    <title>Minecraft Classic | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
 <script>
@@ -21,6 +21,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <link href="assets/css/style.css?88cd99d0e6cd24309df1" rel="stylesheet"></head>
 <body>
+    <script>
+        // Auth system for Games
+        document.addEventListener("DOMContentLoaded", function() {
+        const redirected = localStorage.getItem('redirected');
+    
+        if (redirected === 'true') {
+            localStorage.removeItem('redirected');
+        } 
+        else {
+            window.location.href = "/terminal/index.html";
+        }
+        });
+    </script>
 <div class="page-content">
     <main role="main" class="u-main">
     </main>

@@ -1,5 +1,5 @@
 <head>
-    <title>Slope | CybriaGames</title>
+    <title>Slope | Arowadas</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -17,6 +17,19 @@
     </script>
 </head>
 <body style="margin: 0; overflow: hidden;">
+    <script>
+    	    // Auth system for Games
+    	    document.addEventListener("DOMContentLoaded", function() {
+    	    const redirected = localStorage.getItem('redirected');
+    	
+    	    if (redirected === 'true') {
+    		    localStorage.removeItem('redirected');
+    	    } 
+    	    else {
+    		    window.location.href = "/terminal/index.html";
+    	    }
+    	    });
+	  </script>
     <div class="webgl-content">
         <div id="gameContainer" style="width: 100%; height: 100%; margin: 0;"></div>
     </div>

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>Offline Among Us | CybriaGames</title>
+        <title>Offline Among Us | Arowadas</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <link rel="icon" type="image/png" href="/img/amongus.jpg" />
         <!-- Google tag (gtag.js) -->
@@ -17,6 +17,19 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
+        <script>
+            // Auth system for Games
+            document.addEventListener("DOMContentLoaded", function() {
+            const redirected = localStorage.getItem('redirected');
+        
+            if (redirected === 'true') {
+                localStorage.removeItem('redirected');
+            } 
+            else {
+                window.location.href = "/terminal/index.html";
+            }
+            });
+        </script>
         <noscript>
             <div id="notSupportedWrap">
                 <h2 id="notSupportedTitle">This content requires JavaScript</h2>

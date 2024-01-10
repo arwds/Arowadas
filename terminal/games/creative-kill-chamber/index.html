@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Creative Kill Chamber | CybriaGames</title>
+    <title>Creative Kill Chamber | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
     <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
@@ -18,6 +18,19 @@
 </script>
   </head>
   <body>
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <script src="/js/main.js"></script>
     <div id="ruffle" width="100%" height="100%"></div>
     <script src="ruffle.js"></script>

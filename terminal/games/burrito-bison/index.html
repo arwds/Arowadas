@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
 	
-    <title>Burrito Bison: Launcha Libre | CybriaGames</title>
+    <title>Burrito Bison: Launcha Libre | Arowadas</title>
 <link rel="icon" href="/img/favicon/burrito-bison.png">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
@@ -115,34 +115,47 @@
   </head>
 
   <body>
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <div id="gameContainer"></div>
     <div id="loader">
       <img class="logo" src="Build/logo.png">
       <div class="spinner"></div>
       <div class="progress"><div class="full"></div></div>
     </div>
-  </body>
 
-  <script src="js/unity-mod.js"></script>
-  <script src="Build/UnityLoader.js"></script>
-  <script src='Build/kongregate_api.js'></script>
-  <script>
-  var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json", {onProgress: UnityProgress});
-  function UnityProgress(gameInstance, progress) {
-    if (!gameInstance.Module) {
-      return;
-    }
-    const loader = document.querySelector("#loader");
-    if (!gameInstance.progress) {
-      const progress = document.querySelector("#loader .progress");
-      progress.style.display = "block";
-      gameInstance.progress = progress.querySelector(".full");
-      loader.querySelector(".spinner").style.display = "none";
-    }
-    gameInstance.progress.style.transform = `scaleX(${progress})`;
-    if (progress === 1 && !gameInstance.removeTimeout) {
-     loader.style.display = "none";
-    }
-  }
-  </script>
+    <script src="js/unity-mod.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script src='Build/kongregate_api.js'></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json", {onProgress: UnityProgress});
+      function UnityProgress(gameInstance, progress) {
+        if (!gameInstance.Module) {
+          return;
+        }
+        const loader = document.querySelector("#loader");
+        if (!gameInstance.progress) {
+          const progress = document.querySelector("#loader .progress");
+          progress.style.display = "block";
+          gameInstance.progress = progress.querySelector(".full");
+          loader.querySelector(".spinner").style.display = "none";
+        }
+        gameInstance.progress.style.transform = `scaleX(${progress})`;
+        if (progress === 1 && !gameInstance.removeTimeout) {
+        loader.style.display = "none";
+        }
+      }
+    </script>
+  </body>
 </html>

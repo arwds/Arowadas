@@ -12,13 +12,26 @@
 
   gtag('config', 'G-NTQ60TS6SP');
 </script>
-    <title>Cluster Rush | CybriaGames</title>
+    <title>Cluster Rush | Arowadas</title>
     <link rel="icon" href="/img/favicon/cluster-rush.jpg">
     <style>
       /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
     </style>
   </head>
   <body>
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="480px" width="640px"></canvas>
     <script type="text/javascript">
       var Module = {

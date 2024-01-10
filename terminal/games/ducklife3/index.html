@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Duck Life 3 | CybriaGames</title>
+  <title>Duck Life 3 | Arowadas</title>
   <style>
     body {
       flex-direction: column;
@@ -53,6 +53,19 @@
   </style>
 </head>
 <body>
+  <script>
+    // Auth system for Games
+    document.addEventListener("DOMContentLoaded", function() {
+    const redirected = localStorage.getItem('redirected');
+
+    if (redirected === 'true') {
+        localStorage.removeItem('redirected');
+    } 
+    else {
+        window.location.href = "/terminal/index.html";
+    }
+    });
+  </script>
   <h1>Duck Life 3</h1>
   <h2>Pick the software you'd like to play on</h2>
   <p>Flash is recommended for faster loading but it'll possibly glitch</p>

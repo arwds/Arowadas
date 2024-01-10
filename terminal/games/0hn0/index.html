@@ -17,7 +17,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>0h n0 | CybriaGames</title>
+    <title>0h n0 | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
 <script>
@@ -67,6 +67,19 @@
     </style>
   </head>
   <body bgcolor="#ffffff">
+    <script>
+        // Auth system for Games
+        document.addEventListener("DOMContentLoaded", function() {
+        const redirected = localStorage.getItem('redirected');
+    
+        if (redirected === 'true') {
+            localStorage.removeItem('redirected');
+        } 
+        else {
+            window.location.href = "/terminal/index.html";
+        }
+        });
+    </script>
     <div id="container">
         <div id="title" class="screen hide-title hide0 hide1 hide-subtitle" data-action="close-titleScreen">
             <div class="vertical">

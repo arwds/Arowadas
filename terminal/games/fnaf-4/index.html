@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>FNAF 4 | CybriaGames</title>
+  <title>FNAF 4 | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
     <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
@@ -161,6 +161,19 @@
   
 </head>
 <body>
+  <script>
+    // Auth system for Games
+    document.addEventListener("DOMContentLoaded", function() {
+    const redirected = localStorage.getItem('redirected');
+
+    if (redirected === 'true') {
+        localStorage.removeItem('redirected');
+    } 
+    else {
+        window.location.href = "/terminal/index.html";
+    }
+    });
+  </script>
   <div id="app"></div>
 
   <div id="launch" class="screen" hidden title="Click to start">

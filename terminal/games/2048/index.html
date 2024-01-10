@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>2048 | CybriaGames</title>
+  <title>2048 | Arowadas</title>
 
   <link href="style/main.css" rel="stylesheet" type="text/css">
 <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
@@ -30,6 +30,19 @@
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
+  <script>
+    // Auth system for Games
+    document.addEventListener("DOMContentLoaded", function() {
+    const redirected = localStorage.getItem('redirected');
+
+    if (redirected === 'true') {
+        localStorage.removeItem('redirected');
+    } 
+    else {
+        window.location.href = "/terminal/index.html";
+    }
+    });
+  </script>
   <div class="container">
     <div class="heading">
       <h1 class="title">2048</h1>

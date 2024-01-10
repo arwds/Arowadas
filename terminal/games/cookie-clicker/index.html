@@ -26,7 +26,7 @@
 <!-- end code -->
 <!-- /external -->
 
-<title>Cookie Clicker | CybriaGames</title>
+<title>Cookie Clicker | Arowadas</title>
 <!--
 Code and graphics copyright Orteil, 2013-2023
 Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
@@ -65,7 +65,19 @@ var App=typeof App==='undefined'?0:App;
 <!--[if lt IE9]><script src="excanvas.compiled.js"></script><![endif]-->
 </head>
 <body>
-
+	<script>
+        // Auth system for Games
+        document.addEventListener("DOMContentLoaded", function() {
+        const redirected = localStorage.getItem('redirected');
+    
+        if (redirected === 'true') {
+            localStorage.removeItem('redirected');
+        } 
+        else {
+            window.location.href = "/terminal/index.html";
+        }
+        });
+    </script>
 <div id="wrapper">
 
 	<div id="topBar">

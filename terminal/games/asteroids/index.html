@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Asteroids | CybriaGames</title>
+  <title>Asteroids | Arowadas</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/cybria-games-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/cybria-games-32x32.png">
@@ -328,5 +328,18 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </head>
 <body>
+    <script>
+        // Auth system for Games
+        document.addEventListener("DOMContentLoaded", function() {
+        const redirected = localStorage.getItem('redirected');
+    
+        if (redirected === 'true') {
+            localStorage.removeItem('redirected');
+        } 
+        else {
+            window.location.href = "/terminal/index.html";
+        }
+        });
+    </script>
 </body>
 </html>

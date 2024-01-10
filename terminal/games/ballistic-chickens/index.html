@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Ballistic Chickens | CybriaGames</title>
+	<title>Ballistic Chickens | Arowadas</title>
   <script src="https://unpkg.com/kaboom@2001.0.0-alpha.21/dist/kaboom.js"></script>
   <style>
     body {
@@ -19,6 +19,19 @@
 </head>
 
 <body>
+  <script>
+    // Auth system for Games
+    document.addEventListener("DOMContentLoaded", function() {
+    const redirected = localStorage.getItem('redirected');
+
+    if (redirected === 'true') {
+        localStorage.removeItem('redirected');
+    } 
+    else {
+        window.location.href = "/terminal/index.html";
+    }
+    });
+  </script>
   <script src="data.js"></script>
     
   <script src="code/start.js"></script>

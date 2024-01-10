@@ -14,7 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>FNAF 2 | CybriaGames</title>
+  <title>FNAF 2 | Arowadas</title>
   <link rel="icon" type="image/x-icon" href="/img/favicon/fnaf-all.webp">
   <style>
     body {
@@ -72,9 +72,6 @@
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
-    }
-    #loading {
-      
     }
     .progress-bar-outer {
       border: 1px solid currentColor;
@@ -147,6 +144,19 @@
   <!-- no favicon -->
 </head>
 <body>
+  <script>
+    // Auth system for Games
+    document.addEventListener("DOMContentLoaded", function() {
+    const redirected = localStorage.getItem('redirected');
+
+    if (redirected === 'true') {
+        localStorage.removeItem('redirected');
+    } 
+    else {
+        window.location.href = "/terminal/index.html";
+    }
+    });
+  </script>
   <noscript>Enable JavaScript</noscript>
 
   <div id="app"></div>

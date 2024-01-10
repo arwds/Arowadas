@@ -18,7 +18,7 @@
 </script>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Doge Miner | CybriaGames</title>
+        <title>Doge Miner | Arowadas</title>
         <meta name="description" content="How to mine dogecoins? Find out in Dogeminer: The Dogecoin Mining Simulator. Very wow. To the moon!" />
         <meta
             name="keywords"
@@ -52,6 +52,19 @@
         <script src="/js/main.js"></script>
     </head>
     <body style="background-color: #222222;">
+        <script>
+            // Auth system for Games
+            document.addEventListener("DOMContentLoaded", function() {
+            const redirected = localStorage.getItem('redirected');
+        
+            if (redirected === 'true') {
+                localStorage.removeItem('redirected');
+            } 
+            else {
+                window.location.href = "/terminal/index.html";
+            }
+            });
+        </script>
         <div id="fb-root"></div>
         <div id="BG" class="gpurender animated fadeIn duration-30"></div>
         <div id="BG2" class="gpurender animated fadeIn duration-30"></div>

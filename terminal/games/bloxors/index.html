@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Bloxors | CybriaGames</title>
+    <title>Bloxors | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
 <script>
@@ -16,6 +16,19 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon/bloxorz.jpg">
   </head>
   <body style="background-color:black;">
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <center>
     <div
       id="container"

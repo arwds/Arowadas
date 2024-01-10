@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Getaway Shootout NEW | CybriaGames</title>
+    <title>Getaway Shootout NEW | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
     <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
@@ -37,6 +37,19 @@
   </script>
 </head>
 <body>
+  <script>
+    // Auth system for Games
+    document.addEventListener("DOMContentLoaded", function() {
+    const redirected = localStorage.getItem('redirected');
+
+    if (redirected === 'true') {
+        localStorage.removeItem('redirected');
+    } 
+    else {
+        window.location.href = "/terminal/index.html";
+    }
+    });
+  </script>
   <iframe src="https://getawayshootout.pages.dev" frameborder="0"></iframe>
 </body>
 </html>

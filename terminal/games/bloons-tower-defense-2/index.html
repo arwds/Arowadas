@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Bloons Tower Defense | Arowadas</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
@@ -16,6 +18,19 @@
 <link rel="icon" href="/img/favicon/btd.png">
   </head>
   <body style="margin: 0; padding: 0">
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <div
       id="container"
       style="position: absolute; width: auto; height: auto; inset: 0"

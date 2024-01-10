@@ -11,7 +11,7 @@
   gtag('config', 'G-NTQ60TS6SP');
 </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google Snake | CybriaGames</title>
+    <title>Google Snake | Arowadas/title>
     <link rel="icon" type="image/x-icon" href="/img/favicon/google-snake.png" />
     <script defer="" src="/js/main.js"></script>
     <script>
@@ -611,6 +611,19 @@
     jsmodel="hspDDf"
     jsaction="YUC7He:.CLIENT;IVKTfe:.CLIENT;KsNBn:.CLIENT;sbTXNb:.CLIENT;xjhTIf:.CLIENT;O2vyse:.CLIENT;Ez7VMc:.CLIENT;qqf0n:.CLIENT;me3ike:.CLIENT;IrNywb:.CLIENT;Z94jBf:.CLIENT;A8708b:.CLIENT;YcfJ:.CLIENT;VM8bg:.CLIENT;hWT9Jb:.CLIENT;WCulWe:.CLIENT;NTJodf:.CLIENT;szjOR:.CLIENT;PY1zjf:.CLIENT;wnJTPd:.CLIENT;JL9QDc:.CLIENT;kWlxhc:.CLIENT;qGMTIf:.CLIENT;aeBrn:.CLIENT"
   >
+  <script>
+    // Auth system for Games
+    document.addEventListener("DOMContentLoaded", function() {
+    const redirected = localStorage.getItem('redirected');
+
+    if (redirected === 'true') {
+        localStorage.removeItem('redirected');
+    } 
+    else {
+        window.location.href = "/terminal/index.html";
+    }
+    });
+  </script>
     <link href="assets/css.css" rel="stylesheet" />
     <div jscontroller="pKhWu" class="EjCLSb yZz3de" data-si="1" jsaction="rcuQ6b: npT2md;" data-ved="0ahUKEwj8trGkpur0AhVbFTQIHbN5CkAQtOUBCAE">
       <style>

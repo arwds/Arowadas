@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>
-      Hacker Typer | CybriaGames
+      Hacker Typer | Arowadas
     </title>
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
@@ -259,6 +259,19 @@
   </head>
 
   <body>
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <div id="console" class="outer"></div>
     <div id="gran" class="accessGranted">
       <h2>ACCESS GRANTED</h2>

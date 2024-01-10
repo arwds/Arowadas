@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>A Dance of Fire And Ice | CybriaGames</title>
+    <title>A Dance of Fire And Ice | Arowadas</title>
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
     <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
@@ -25,6 +25,19 @@
     </script>
   </head>
   <body style="margin: 0px; overflow: hidden;">
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <div id="gameContainer" style="width: 100vw; height: 100vh; margin: auto; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);"></div>
   </body>
 </html>

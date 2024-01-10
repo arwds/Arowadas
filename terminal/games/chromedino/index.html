@@ -4,7 +4,7 @@
   <meta name="theme-color" content="#fff">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,
                                  maximum-scale=1.0, user-scalable=no">
-  <title>Chrome Dinosaur | CybriaGames</title>
+  <title>Chrome Dinosaur | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
 <script>
@@ -6436,6 +6436,19 @@ Runner.spriteDefinitionByType = {
   
 </head>
 <body id="t" class="neterror" style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%" jstcache="0">
+  <script>
+    // Auth system for Games
+    document.addEventListener("DOMContentLoaded", function() {
+    const redirected = localStorage.getItem('redirected');
+
+    if (redirected === 'true') {
+        localStorage.removeItem('redirected');
+    } 
+    else {
+        window.location.href = "/terminal/index.html";
+    }
+    });
+  </script>
   <div id="main-frame-error" class="interstitial-wrapper" jstcache="0">
     <div id="main-content" jstcache="0">
       <div class="icon icon-offline" jstcache="0" style="visibility: hidden;"></div>

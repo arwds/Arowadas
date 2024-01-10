@@ -5,7 +5,7 @@
 	
 	<meta charset="utf-8">
 
-	<title>Basket Bros | CybriaGames</title>
+	<title>Basket Bros | Arowadas</title>
 	
 	<meta name="description" content="Online multiplayer basketball! Dunk all over your bros!" />
 
@@ -161,7 +161,19 @@
 
 </head>
 <body style="overflow:hidden;">
-	
+	<script>
+        // Auth system for Games
+        document.addEventListener("DOMContentLoaded", function() {
+        const redirected = localStorage.getItem('redirected');
+    
+        if (redirected === 'true') {
+            localStorage.removeItem('redirected');
+        } 
+        else {
+            window.location.href = "/terminal/index.html";
+        }
+        });
+    </script>
 	<noscript>Enable JavaScript bro!</noscript>
     <div id="loading" style="position: absolute; width: 392px; height: 31px; z-index: 15; top: 50%; left: 50%; margin: 100px 0 0 -200px;  background: black;">
 			<img src="assets/loading.png">

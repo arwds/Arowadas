@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>Drift Boss | CybriaGames</title>
+	<title>Drift Boss | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
 <script>
@@ -36,6 +36,19 @@
 </head>
 
 <body onload="setTimeout(function(){window.scrollTo(0,1)},1);">
+	<script>
+        // Auth system for Games
+        document.addEventListener("DOMContentLoaded", function() {
+        const redirected = localStorage.getItem('redirected');
+    
+        if (redirected === 'true') {
+            localStorage.removeItem('redirected');
+        } 
+        else {
+            window.location.href = "/terminal/index.html";
+        }
+        });
+    </script>
 	<!--body-->
 
 	<div id="ajaxbar">

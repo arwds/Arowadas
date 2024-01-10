@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Drive Mad | CybriaGames</title>
+    <title>Drive Mad | Arowadas</title>
     <script type="text/javascript" src="Jump_Gamemonetize.js"></script>
     <script src="/js/main.js"></script>
     <meta name="description" content="" />
@@ -22,6 +22,19 @@
 </script>
   </head>
   <body id="body">
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <div id="modal_parent">
       <div id="modal_content">
         <span id="modal_close_button">&times;</span>

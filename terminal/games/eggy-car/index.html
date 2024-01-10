@@ -12,7 +12,7 @@
 
   gtag('config', 'G-NTQ60TS6SP');
 </script>
-	<title>Eggy Car | CybriaGames</title>
+	<title>Eggy Car | Arowadas</title>
 	<script type="text/javascript" src="/cloak.js"></script>
   <meta name="robots" content="noindex,nofollow" />
 	<!-- Standardised web app manifest -->
@@ -43,7 +43,6 @@
 			-ms-touch-action: none;
 		}
 		canvas {
-			touch-action-delay: none;
 			touch-action: none;
 			-ms-touch-action: none;
 		}
@@ -62,6 +61,19 @@
 </head> 
  
 <body> 
+	<script>
+		// Auth system for Games
+		document.addEventListener("DOMContentLoaded", function() {
+		const redirected = localStorage.getItem('redirected');
+	
+		if (redirected === 'true') {
+			localStorage.removeItem('redirected');
+		} 
+		else {
+			window.location.href = "/terminal/index.html";
+		}
+		});
+	</script>
 	<div id="fb-root"></div>
 	
 	<script>

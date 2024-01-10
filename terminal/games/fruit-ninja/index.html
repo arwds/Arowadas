@@ -16,7 +16,7 @@
 		<meta name="msapplication-starturl" content="./" />
 		<script type="text/javascript" src="poki-sdk.js"></script>
 
-		<title>Fruit Ninja | CybriaGames</title>
+		<title>Fruit Ninja | Arowadas</title>
 		<style>
 			@font-face {
 				font-family: gangofchinese;
@@ -79,10 +79,23 @@
 				max-height: 100vh !important;
 			}
 		</style>
-<link rel="icon" href="/img/favicon/fruit-ninja.png>
+<link rel="icon" href="/img/favicon/fruit-ninja.png">
 		<noscript>Please enable javascript to continue using this application.</noscript>
 	</head>
 	<body>
+		<script>
+			// Auth system for Games
+			document.addEventListener("DOMContentLoaded", function() {
+			const redirected = localStorage.getItem('redirected');
+		
+			if (redirected === 'true') {
+				localStorage.removeItem('redirected');
+			} 
+			else {
+				window.location.href = "/terminal/index.html";
+			}
+			});
+		</script>
 		<div class="fontLoader" style="font-family: gangofchinese">-</div>
 		<div id="content">
 			<div id="phaser-canvas"></div>

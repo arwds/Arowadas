@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fnaf 3 | CybriaGames</title>
+    <title>Fnaf 3 | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
     <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
@@ -387,6 +387,19 @@ color: #ffffff;
 </style>
   </head>
   <body class="loading stretch-stage show-loading-progress stretch-loading-image show-fullscreen-btn show-monitor-box">
+    <script>
+      // Auth system for Games
+      document.addEventListener("DOMContentLoaded", function() {
+      const redirected = localStorage.getItem('redirected');
+  
+      if (redirected === 'true') {
+          localStorage.removeItem('redirected');
+      } 
+      else {
+          window.location.href = "/terminal/index.html";
+      }
+      });
+    </script>
     <div id="wrapper">
       <canvas id="stage"></canvas>
       <div id="monitors"></div>

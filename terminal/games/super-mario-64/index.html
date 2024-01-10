@@ -12,7 +12,7 @@
 
   gtag('config', 'G-NTQ60TS6SP');
 </script>
-    <title>Super Mario 64 | CybriaGames</title>
+    <title>Super Mario 64 | Arowadas</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon/sm64.ico">
     <style>
       body, html{
@@ -42,6 +42,19 @@
     </style>
   </head>
   <body>
+    <script>
+    	    // Auth system for Games
+    	    document.addEventListener("DOMContentLoaded", function() {
+    	    const redirected = localStorage.getItem('redirected');
+    	
+    	    if (redirected === 'true') {
+    		    localStorage.removeItem('redirected');
+    	    } 
+    	    else {
+    		    window.location.href = "/terminal/index.html";
+    	    }
+    	    });
+	  </script>
     <div id="container">
       <canvas class="emscripten" id="canvas"></canvas>
     </div>

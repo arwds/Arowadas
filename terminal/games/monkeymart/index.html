@@ -907,7 +907,7 @@ gadgets.config.init({"core.io":{"jsonProxyUrl":"//%host%/gadgets/makeRequest","p
     <meta content="yes" name="apple-mobile-web-app-capable">
   
       <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Monkey Mart | CybriaGames</title>
+    <title>Monkey Mart | Arowadas</title>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
     <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/cybria-games-16x16.png">
@@ -12946,7 +12946,21 @@ if (Module["preInit"]) {
 var shouldRunNow = true;
 if (Module["noInitialRun"]) shouldRunNow = false;
 noExitRuntime = true;
-run();</script></head><body dir="ltr" data-new-gr-c-s-check-loaded="14.1100.0" data-gr-ext-installed=""><script src="https://218463058-163927403382736103.preview.editmysite.com/uploads/b/139890129-297434511671085883/files/Jump_Gamemonetize3.js" type="text/javascript"></script><script>
+run();</script></head><body dir="ltr" data-new-gr-c-s-check-loaded="14.1100.0" data-gr-ext-installed=""><script src="https://218463058-163927403382736103.preview.editmysite.com/uploads/b/139890129-297434511671085883/files/Jump_Gamemonetize3.js" type="text/javascript">
+	<script>
+        // Auth system for Games
+        document.addEventListener("DOMContentLoaded", function() {
+        const redirected = localStorage.getItem('redirected');
+    
+        if (redirected === 'true') {
+            localStorage.removeItem('redirected');
+        } 
+        else {
+            window.location.href = "/terminal/index.html";
+        }
+        });
+    </script>
+</script><script>
         var mpConfig = {
             "game": "monkey-mart",
             "partner": "miniplay"

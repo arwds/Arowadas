@@ -14,7 +14,7 @@
     
     <link rel="manifest" href="subwaysurfers.webmanifest">
     <link rel="icon" href="/img/favicon/subway-surfers.webp" type="image/png">
-    <title>Subway Surfers | CybriaGames</title>
+    <title>Subway Surfers | Arowadas</title>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTQ60TS6SP"></script>
 <script>
@@ -71,6 +71,19 @@
     </style>
 </head>
 <body>
+    <script>
+    	    // Auth system for Games
+    	    document.addEventListener("DOMContentLoaded", function() {
+    	    const redirected = localStorage.getItem('redirected');
+    	
+    	    if (redirected === 'true') {
+    		    localStorage.removeItem('redirected');
+    	    } 
+    	    else {
+    		    window.location.href = "/terminal/index.html";
+    	    }
+    	    });
+	  </script>
     <script>
         window.NOSW = true;
         window.GAME_CONFIG = {

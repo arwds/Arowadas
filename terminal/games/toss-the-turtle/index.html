@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Toss The Turtle | CybriaGames</title>
+    <title>Toss The Turtle | Arowadas</title>
     <link rel="icon" type="image/x-icon" href="/img/favicon/cybria-games.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/cybria-games-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/cybria-games-32x32.png">
@@ -17,6 +17,19 @@
     </script>
   </head>
   <body>
+    <script>
+    	    // Auth system for Games
+    	    document.addEventListener("DOMContentLoaded", function() {
+    	    const redirected = localStorage.getItem('redirected');
+    	
+    	    if (redirected === 'true') {
+    		    localStorage.removeItem('redirected');
+    	    } 
+    	    else {
+    		    window.location.href = "/terminal/index.html";
+    	    }
+    	    });
+	  </script>
     <script src="/js/main.js"></script>
     <center id="centerContent">
       <img src="/img/favicon/cybria-games-128x128.png" alt="CybriaGames">

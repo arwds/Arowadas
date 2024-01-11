@@ -102,6 +102,10 @@
     #shutdown{
       background-color: red;
     }
+    #incorrectpassword{
+      color: rgb(230, 51, 51);
+      font-size: 20px;
+    }
         /* Default favicon for all screen sizes
           link[rel="icon"] {
           display: none; /* Hide the default favicon
@@ -205,8 +209,9 @@
 <div id="loginpage">
 <center>
 <h1 id="loginterminal">Arowadas Secure Login Terminal</h1>
-<input id="passwordenter" placeholder="PASSWORD" type="password" onkeydown="if (event.keyCode == 13) { checkpswd(); }" />
-<button id="passwordbutton" onclick="checkpswd()">Enter</button>
+<input id="passwordenter" placeholder="PASSWORD" type="password" onkeydown="if (event.keyCode == 13) { checkpswd(); }" oninput="unincorrectpassword()"/>
+<button id="passwordbutton" onclick="checkpswd()">Enter</button><br>
+<p id="incorrectpassword"></p>
 </center>
 </div>
 
@@ -969,6 +974,16 @@ var msnry = new Masonry( elem, {
     adminportal.style.display = "block";
   }
 
+  function incorrectpassword(){
+    var incpassword = document.getElementById("incorrectpassword");
+    incpassword.textContent = "Incorrect Password";
+  }
+
+  function unincorrectpassword(){
+    var incpassword = document.getElementById("incorrectpassword");
+    incpassword.textContent = "";
+  }
+
   function checkpswd(){
     var pwdenter = document.getElementById("passwordenter").value;
     
@@ -977,13 +992,16 @@ var msnry = new Masonry( elem, {
     if(pwdenter.toLowerCase() == psd){
       hidelogin();
       showmain();
-    };
+    }
 
-    
-    if(pwdenter.toLowerCase() == "onnix"){
+    else if(pwdenter.toLowerCase() == "onnix"){
       hidelogin();
       showmain();
       showadminportal();
+    }
+
+    else{
+      incorrectpassword();
     }
   };
 </script>

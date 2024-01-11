@@ -986,17 +986,23 @@ var msnry = new Masonry( elem, {
     var adminportal = document.getElementById("adminportal");
 
     adminportal.style.display = "block";
+  };
+
+  function showmodpanel(){
+    var modportal = document.getElementById("modportal")
+
+    modportal.style.display = "block";
   }
 
   function incorrectpassword(){
     var incpassword = document.getElementById("incorrectpassword");
     incpassword.textContent = "Incorrect Password";
-  }
+  };
 
   function unincorrectpassword(){
     var incpassword = document.getElementById("incorrectpassword");
     incpassword.textContent = "";
-  }
+  };
 
   function checkpswd(){
     var pwdenter = document.getElementById("passwordenter").value;
@@ -1012,6 +1018,10 @@ var msnry = new Masonry( elem, {
       hidelogin();
       showmain();
       showadminportal();
+    }
+
+    else if(pwd.toLowerCase() == "ommit"){
+      showmodpanel()
     }
 
     else{

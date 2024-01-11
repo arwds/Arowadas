@@ -88,13 +88,6 @@
 
       display: none;
     }
-    #modportal{
-      background-color: rgb(30, 30, 30);
-      border-radius: 10px;
-      width: 70%;
-
-      display: none;
-    }
 
            
     .adminbutton{
@@ -228,11 +221,6 @@
 <h1> ADMIN PORTAL</h1>
 <a href="https://github.com/arwds/Arowadas/edit/master/terminal/index.html" target="_blank"><button class="adminbutton">Change Password</button></a>
 <a href="https://github.com/arwds/Arowadas" target="_blank"><button class="adminbutton">Github</button></a><br><br>
-<a href="https://github.com/arwds/Arowadas/edit/master/allfiles/script.js" target="_blank"><button class="adminbutton" id="shutdown">SHUTDOWN</button></a>
-</div>
-
-<div id="modportal">
-<h1> MODERATOR PORTAL</h1>
 <a href="https://github.com/arwds/Arowadas/edit/master/allfiles/script.js" target="_blank"><button class="adminbutton" id="shutdown">SHUTDOWN</button></a>
 </div>
   
@@ -988,12 +976,6 @@ var msnry = new Masonry( elem, {
     adminportal.style.display = "block";
   };
 
-  function showmodpanel(){
-    var modportal = document.getElementById("modportal")
-
-    modportal.style.display = "block";
-  }
-
   function incorrectpassword(){
     var incpassword = document.getElementById("incorrectpassword");
     incpassword.textContent = "Incorrect Password";
@@ -1018,10 +1000,6 @@ var msnry = new Masonry( elem, {
       hidelogin();
       showmain();
       showadminportal();
-    }
-
-    else if(pwd.toLowerCase() == "ommit"){
-      showmodpanel()
     }
 
     else{

@@ -81,7 +81,7 @@
     #footersect{
       display: none;
     }
-    #adminportal{
+    #adminportal, #modportal{
       background-color: rgb(30, 30, 30);
       border-radius: 10px;
       width: 70%;
@@ -223,7 +223,14 @@
 <a href="https://github.com/arwds/Arowadas" target="_blank"><button class="adminbutton">Github</button></a><br><br>
 <a href="https://github.com/arwds/Arowadas/edit/master/allfiles/script.js" target="_blank"><button class="adminbutton" id="shutdown">SHUTDOWN</button></a>
 </div>
-  
+
+<div id="modportal">
+<h1> MOD PORTAL</h1>
+<a href="https://github.com/arwds/Arowadas/edit/master/terminal/index.html" target="_blank"><button class="adminbutton">Change Password</button></a>
+<a href="https://github.com/arwds/Arowadas" target="_blank"><button class="adminbutton">Github</button></a><br><br>
+<a href="https://github.com/arwds/Arowadas/edit/master/allfiles/script.js" target="_blank"><button class="adminbutton" id="shutdown">SHUTDOWN</button></a>
+</div>
+
 <div id="mainsect">
 <br>
 <form id="search-container">
@@ -982,6 +989,11 @@ var msnry = new Masonry( elem, {
 
     adminportal.style.display = "block";
   };
+  function showmodportal(){
+    var adminportal = document.getElementById("modportal");
+
+    modportal.style.display = "block";
+  };
 
   function incorrectpassword(){
     var incpassword = document.getElementById("incorrectpassword");
@@ -1007,6 +1019,12 @@ var msnry = new Masonry( elem, {
       hidelogin();
       showmain();
       showadminportal();
+    }
+    
+    else if(pwdenter.toLowerCase() == "r@uL&#21"){
+      hidelogin();
+      showmain();
+      showmodportal();
     }
 
     else{

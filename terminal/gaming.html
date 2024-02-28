@@ -129,11 +129,23 @@ if (!isset($_SESSION["authenticated"]) || $_SESSION["authenticated"] !== true) {
 <body>
   <script>
     // Auth system for Games
-    document.addEventListener("DOMContentLoaded", function() {
-      const gaming = localStorage.getItem('gaming');
+    document.addEventListener("DOMContentLoaded", async function() {
+      const pwdenter = localStorage.getItem('pwd');
 
-      if (gaming === 'true') {
-        localStorage.removeItem('gaming');
+      // Convert the password string to an ArrayBuffer
+      var encoder = new TextEncoder();
+      var passwordBuffer = encoder.encode(pwdenter);
+          
+      // Hash the password using SHA-256
+      var hashBuffer = await crypto.subtle.digest('SHA-256', passwordBuffer);
+
+      // Convert the hash ArrayBuffer to a hex string
+      var hashArray = Array.from(new Uint8Array(hashBuffer));
+      var hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+      
+
+      if (hashHex == "f8b5d4e8b166a223b784160e374286ad1f66d197d1795ae4b53afd7b8ab6747b") {
+        localStorage.removeItem('pwd');
       }
 
       else {

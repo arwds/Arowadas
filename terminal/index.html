@@ -176,13 +176,8 @@
             var hashArray = Array.from(new Uint8Array(hashBuffer));
             var hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
 
-            
-            
-            //var testtext = document.getElementById("loginterminal");
-            //testtext.textContent = hashHex;
-
             if(hashHex == "f8b5d4e8b166a223b784160e374286ad1f66d197d1795ae4b53afd7b8ab6747b"){
-                localStorage.setItem('gaming', 'true');
+                localStorage.setItem('pwd', pwdenter);
                 window.location.href = "gaming.html";
             }
 

@@ -20,7 +20,7 @@
     }
     
     #search-button {
-      background-color: #4CAF50;
+      background-color: #3e7cb6;
       border: none;
       color: white;
       font-size: 20px;
@@ -41,7 +41,7 @@
     }
 
     #passwordbutton{
-      background-color: #4CAF50;
+      background-color: #3e7cb6;
       border: none;
       color: white;
       font-size: 20px;
@@ -57,29 +57,6 @@
     }
     #footersect{
       display: none;
-    }
-    #adminportal, #modportal{
-      background-color: rgb(30, 30, 30);
-      border-radius: 10px;
-      width: 70%;
-
-      display: none;
-    }
-
-           
-    .adminbutton{
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-      border-radius: 5px;
-      padding: 10px 15px;
-      margin-left: 10px;
-      margin-bottom: 15px;
-    }
-    .shutdown{
-      background-color: red;
     }
     #incorrectpassword{
       color: rgb(230, 51, 51);
@@ -173,25 +150,50 @@
     <div id="loginpage">
         <center>
             <h1 id="loginterminal">Arowadas Secure Login Terminal</h1>
-            <form id="loginForm" action="login.php" method="post">
-                <input id="password" name="password" placeholder="PASSWORD" type="password" required/>
-                <button type="submit" id="passwordbutton">Enter</button><br>
-            </form>
-            <!-- <p id="incorrectpassword"></p> -->
+            <input id="password" name="password" placeholder="PASSWORD" type="password" onkeydown="if (event.keyCode == 13) { checkpswd(); }" oninput="unincorrectpassword()" required/>
+            <button id="passwordbutton" onclick="checkpswd()">Enter</button><br>
+            <p id="incorrectpassword"></p>
         </center>
     </div>
-
     <script>
-        // Listen for key press event on the password field
-        document.getElementById("password").addEventListener("keyup", function(event) {
-            // Check if the key pressed is Enter (key code 13)
-            if (event.keyCode === 13) {
-                // Cancel the default action, which is submitting the form
-                event.preventDefault();
-                // Manually submit the form
-                document.getElementById("loginForm").submit();
+        var incpassword = document.getElementById("incorrectpassword");
+
+        function unincorrectpassword(){
+            incpassword.textContent = "";
+        };
+
+        async function checkpswd(){
+            var pwdenter = document.getElementById("password").value;
+            
+            // Convert the password string to an ArrayBuffer
+            var encoder = new TextEncoder();
+            var passwordBuffer = encoder.encode(pwdenter);
+            
+            // Hash the password using SHA-256
+            var hashBuffer = await crypto.subtle.digest('SHA-256', passwordBuffer);
+            
+            // Convert the hash ArrayBuffer to a hex string
+            var hashArray = Array.from(new Uint8Array(hashBuffer));
+            var hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+
+            
+            
+            //var testtext = document.getElementById("loginterminal");
+            //testtext.textContent = hashHex;
+
+            if(hashHex == "f8b5d4e8b166a223b784160e374286ad1f66d197d1795ae4b53afd7b8ab6747b"){
+                localStorage.setItem('gaming', 'true');
+                window.location.href = "gaming.html";
             }
-        });
+
+            else if(pwdenter.toLowerCase() == ""){
+                incpassword.textContent = "Please Enter a Password";
+            }
+
+            else{
+                incpassword.textContent = "Incorrect Password";
+            }
+        }    
     </script>
 </body>
 </html>

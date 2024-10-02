@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Terminal Encoder</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link rel="stylesheet" type="text/css" href="/terminal/style.css">
+
+
+  <meta charset="utf-8">
+  <style>
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 400%;
+      background-color: transparent;
+      z-index: -1;
+    }
+
+    #search-input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    #search-button {
+      background-color: #5f208a;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-left: 10px;
+    }
+
+    body {
+      font-family: 'Roboto Condensed', Arial, sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    #password {
+      padding: 10px;
+      font-size: 19px;
+      border-radius: 5px;
+      border-color: white;
+      border-width: 1px;
+      background-color: transparent;
+      color: white;
+    }
+
+    #passwordbutton {
+      background-color: #5f208a;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-left: 10px;
+    }
+
+
+    #mainsect {
+      display: none;
+    }
+
+    #footersect {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+  <header>
+    <nav>
+      <center>
+        <h1>Arowadas Terminal</h1>
+        <center>
+    </nav>
+  </header>
+
+  <div id="loginpage">
+    <center>
+      <h1 id="loginterminal">Arowadas Terminal Encoder</h1>
+      <input id="password" name="password" placeholder="PASSWORD" type="text"
+        onkeydown="if (event.keyCode == 13) { checkpswd(); }" oninput="hashed()" required="">
+      <button id="passwordbutton" onclick="checkpswd()">Enter</button><br>
+      <p id="hash">Hashed password will appear here</p>
+    </center>
+  </div>
+  <script>
+    var hash = document.getElementById("hash");
+
+    function hashed() {
+      hash.textContent = "Hashed password will appear here";
+    };
+
+    async function checkpswd() {
+      var pwdenter = document.getElementById("password").value;
+
+      var hashHex = sha256(pwdenter);
+
+      hash.innerHTML = hashHex
+    }    
+  </script>
+
+
+</body>
+
+</html>

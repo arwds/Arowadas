@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Arowadas Terminal</title>
+  <meta charset="utf-8" />
+  <style>
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 400%;
+      background-color: transparent;
+      z-index: -1;
+    }
+
+    #search-input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    #search-button {
+      background-color: #5f208a;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-left: 10px;
+    }
+
+    #password {
+      padding: 10px;
+      font-size: 19px;
+      border-radius: 5px;
+      border-color: white;
+      border-width: 1px;
+      background-color: transparent;
+      color: white;
+    }
+
+    #passwordbutton {
+      background-color: #5f208a;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin-left: 10px;
+    }
+
+
+    #mainsect {
+      display: none;
+    }
+
+    #footersect {
+      display: none;
+    }
+
+    #incorrectpassword {
+      color: rgb(230, 51, 51);
+      font-size: 20px;
+    }
+  </style>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="/terminal/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <script src="/terminal/killswitch.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+  <header>
+    <nav>
+      <center>
+        <h1>Arowadas Terminal</h1>
+        <center>
+    </nav>
+  </header>
+  <main>
+    <div id="particles-js"></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: '#ffffff' },
+          shape: { type: 'circle', stroke: { width: 0, color: '#000000' }, polygon: { nb_sides: 5 }, image: { src: 'terminal/img/github.svg', width: 100, height: 100 } },
+          opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+          size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+          line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+          move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+          modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+        },
+        retina_detect: true
+      });
+    </script>
+
+    <div id="loginpage">
+      <center>
+        <h1 id="loginterminal">Arowadas Secure Login Terminal</h1>
+        <input id="password" name="password" placeholder="PASSWORD" type="password"
+          onkeydown="if (event.keyCode == 13) { checkpswd(); }" oninput="unincorrectpassword()" required />
+        <button id="passwordbutton" onclick="checkpswd()">Enter</button><br>
+        <p id="incorrectpassword"></p>
+      </center>
+    </div>
+    <script>
+      var incpassword = document.getElementById("incorrectpassword");
+
+      function unincorrectpassword() {
+        incpassword.textContent = "";
+      };
+
+      async function checkpswd() {
+        var pwdenter = document.getElementById("password").value;
+
+        var hashHex = sha256(pwdenter);
+
+        if (hashHex == "5503004b3fc46f2e8ba748a91d0959b7aeccc22d8b87e491040a5475b5bb978f") {
+          localStorage.setItem('pwd', pwdenter);
+          window.location.href = "gaming.html";
+        }
+
+        else if (pwdenter.toLowerCase() == "") {
+          incpassword.textContent = "Please Enter a Password";
+        }
+
+        else {
+          incpassword.textContent = "Incorrect Password";
+        }
+      }    
+    </script>
+</body>
+
+</html>

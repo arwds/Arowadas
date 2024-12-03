@@ -1,4 +1,4 @@
-var killswitch = true;
+var killswitch = false;
 
 function Iskillswitch() {
     if (killswitch == true) {
